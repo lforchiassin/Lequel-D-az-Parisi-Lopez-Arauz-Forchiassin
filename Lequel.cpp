@@ -11,7 +11,7 @@
 #include <codecvt>
 #include <locale>
 #include <iostream>
-
+#include <string>
 #include "Lequel.h"
 
 using namespace std;
