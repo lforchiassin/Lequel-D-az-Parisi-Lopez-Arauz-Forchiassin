@@ -1,0 +1,67 @@
+##############################
+# Visual Studio
+##############################
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+##############################
+# Compilación
+##############################
+[Bb]in/
+[Oo]bj/
+out/
+build/
+x64/
+Debug/
+Release/
+[Aa]rm/
+[Aa]rm64/
+ipch/
+
+##############################
+# Archivos de CMake
+##############################
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+*.cmake
+
+##############################
+# Archivos de IDE y temporales
+##############################
+*.log
+*.tlog
+*.idb
+*.pdb
+*.ilk
+*.obj
+*.exe
+*.dll
+*.lib
+*.app
+*.exp
+
+# Archivos intermedios de compilación
+*.pch
+*.obj
+*.tmp
+*.cache
+*.o
+
+##############################
+# Otros
+##############################
+*.db
+*.opendb
+*.VC.db
+*.VC.VC.opendb
+*.ipdb
+*.iobj
+
+# Archivos de configuración local
+*.local
+*.userprefs
