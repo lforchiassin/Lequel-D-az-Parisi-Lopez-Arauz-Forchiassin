@@ -1,0 +1,6 @@
+# ninja log v6
+25	830	7790731360808052	CMakeFiles/main.dir/Lequel.cpp.obj	dd3b69b734c59b04
+18	833	7790731360742393	CMakeFiles/main.dir/Text.cpp.obj	6b87627e9adaab6a
+12	835	7790731360612579	CMakeFiles/main.dir/CSVData.cpp.obj	98c1bd7f1630a140
+3	842	7790731360584534	CMakeFiles/main.dir/main.cpp.obj	37c601efcb7e2b2c
+842	2036	7790731368976739	main.exe	930b8833e1989ad0
