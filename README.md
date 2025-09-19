@@ -2,7 +2,9 @@
 
 ## Integrantes del grupo y contribución al trabajo de cada integrante
 Rocco Diaz Parisi: Programa, documentacion del proyecto.
+
 Jorge Lopez Arauz: Programa, documentacion del proyecto.
+
 Luca Mateo Forchiassin: Programa, documentacion del proyecto.
 
 ## Respuestas del enunciado
