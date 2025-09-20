@@ -1,6 +1,6 @@
 /**
  * @brief Lequel? language identification based on trigrams
- * @author Marc S. Ressl
+ * @author Marc S. Ressl, Rocco Diaz Parisi, Jorge Lopez Arauz, Luca Mateo Forchiassin
  *
  * @copyright Copyright (c) 2022-2023
  *
@@ -33,23 +33,23 @@ TrigramProfile buildTrigramProfile(const Text& text)
     wstring_convert<std::codecvt_utf8_utf16<wchar_t>> converter;
     TrigramProfile profile; // map<string, float>
 
-    // Iterar sobre cada línea del texto
+	// Iterates over each line in the text
     for (const auto& line : text)
     {
         string processedLine = line;
 
-        // Eliminar salto de línea tipo '\r' si existe
+		//Deletes carriage return character '\r' if it exists
         if (!processedLine.empty() && processedLine.back() == '\r')
             processedLine = processedLine.substr(0, processedLine.length() - 1);
 
-        // Convertir string UTF-8 a wstring para manejar caracteres Unicode
+		// Converts the line to a wide string for proper Unicode handling
         wstring unicodeLine = converter.from_bytes(processedLine);
 
-        // Ignorar líneas con menos de 3 caracteres
+		// Ignores lines that are too short to contain any trigrams
         if (unicodeLine.length() < 3)
             continue;
 
-        // Extraer todos los trigramas de la línea
+		// Extracts trigrams from the line
         for (size_t i = 0; i <= unicodeLine.length() - 3; i++)
         {
             wstring trigramW = unicodeLine.substr(i, 3);
@@ -77,7 +77,7 @@ void normalizeTrigramProfile(TrigramProfile& trigramProfile)
         sumOfSquares += frequency * frequency;
     }
 
-    // Verificar si la suma es cero para evitar división por cero
+	// Verifies to avoid division by zero
     if (sumOfSquares == 0.0)
         return;
 
@@ -104,18 +104,18 @@ float getCosineSimilarity(TrigramProfile& textProfile, TrigramProfile& languageP
         const std::string& trigram = element.first;
         float textFrequency = element.second;
 
-        // Buscar si este trigrama también existe en el perfil del lenguaje
+		// Search for the trigram in the language profile
         auto it = languageProfile.find(trigram);
         if (it != languageProfile.end())
         {
-            // Si existe, obtener su frecuencia en el perfil del lenguaje
+			// If exists, get its frequency
             float languageFrequency = it->second;
 
-            // Multiplicar las frecuencias y sumar al total de similitud
+			// Multiply the frequencies and add to the similarity score
             similarity += textFrequency * languageFrequency;
         }
-        // Si el trigrama no existe en el perfil del lenguaje, no contribuye a la similitud
-        // (equivale a multiplicar por 0)
+		// If the trigram does not exist in the language profile, it contributes 0 to the similarity
+        // (as if multiplying by 0)
     }
 
     return similarity;
@@ -130,16 +130,16 @@ float getCosineSimilarity(TrigramProfile& textProfile, TrigramProfile& languageP
  */
 string identifyLanguage(const Text& text, LanguageProfiles& languageProfiles)
 {
-    // Paso 1: Construir el perfil de trigramas del texto
+	// Build trigram profile for the input text
     TrigramProfile textProfile = buildTrigramProfile(text);
 
-    // Paso 2: Normalizar las frecuencias del perfil del texto
+    // Normalize the text trigram profile
     normalizeTrigramProfile(textProfile);
 
-    string bestLanguageCode = "";
-    float maxSimilarity = -1.0f; // Inicializar con un valor menor que cualquier similitud posible
+    string bestLanguageCode = ""; 
+	float maxSimilarity = -1.0f; // Inicialice with -1 to ensure any similarity will be higher
 
-    // Paso 3: Iterar sobre todos los perfiles de lenguajes
+	// Iterate over each language profile to find the best match
     for (auto& languageProfile : languageProfiles)
     {
         float similarity = getCosineSimilarity(textProfile, languageProfile.trigramProfile);

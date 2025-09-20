@@ -1,6 +1,7 @@
 # EDA #level2: Lequel?
 
 ## Integrantes del grupo y contribución al trabajo de cada integrante
+
 Rocco Diaz Parisi: Programa, documentacion del proyecto.
 
 Jorge Lopez Arauz: Programa, documentacion del proyecto.
@@ -14,7 +15,7 @@ Luca Mateo Forchiassin: Programa, documentacion del proyecto.
 історія земель сучасної України, українського народу та інших національностей, що проживають на території України, від доісторичних часів до сьогодення.
 
 
-Ucruniano.
+Ucraniano.
 
 
 2. ¿En qué idioma está el siguiente texto?
@@ -86,7 +87,7 @@ Guyaratí.
 Al Seicento appartiene il primo trattato dedicato non ai volgari italiani o a uno o più di tali volgari, ma alla lingua italiana in quanto tale: Delle osservazioni della lingua italiana di Marcantonio Mambelli, detto il Cinonio.
 
 
-Italiano
+Italiano.
 
 
 11. El siguiente texto fue escrito por Robert Burns en escocés. ¿Qué dice Lequel? ¿Qué falla? Justifica por qué ocurre lo que ocurre.
@@ -94,7 +95,7 @@ Italiano
 And there's a hand, my trusty fiere! and gie's a hand o' thine! And we’ll tak' a right gude-willie waught, for auld lang syne.
 
 
-Lequqel deci que esta en ingles. Esto ocurre ya que en el texto se estan utilizando diversas palabras que se asimilan al ingles (por ejemplo "AND", "THERE'S", etc) y por lo tanto el perfil de ambas lenguas son parecidos y al generar el perfil de trigramas del texto se van a encontrar similitudes con el perfil de la lengua inglesa.
+Lequqel indica que está en inglés. Esto ocurre ya que en el texto se estan utilizando diversas palabras que se asimilan al inglés (por ejemplo "AND", "THERE'S", etc) y por lo tanto el perfil de ambas lenguas son parecidos y al generar el perfil de trigramas del texto se van a encontrar similitudes con el perfil de la lengua inglesa.
 
 
 12. El siguiente texto está en inglés. ¿Qué dice Lequel? ¿Qué falla? Justifica por qué ocurre lo que ocurre.
@@ -109,9 +110,18 @@ WE WERE ALL GOING DIRECT TO HEAVEN, WE WERE ALL GOING DIRECT THE OTHER WAY
 – IN SHORT, THE PERIOD WAS SO FAR LIKE THE PRESENT PERIOD, THAT SOME OF ITS NOISIEST AUTHORITIES INSISTED ON ITS BEING RECEIVED, FOR GOOD OR FOR EVIL, IN THE SUPERLATIVE DEGREE OF COMPARISON ONLY.
 
 
-Lequqel deci que esta en afrikaans. Esto ocurre debido a que los perfiles de los idiomas otorgados no estan preparados para manejar tantas mayusculas consecutivas.
+Lequqel indica que está en afrikaans. Esto ocurre debido a que los perfiles de los idiomas otorgados no estan preparados para manejar tantas mayusculas consecutivas.
 
 
 ## Bonus points
 
 [completar]
+
+
+## Referencias
+
+**Claude AI**: Herramienta de desarrollo utilizada principalmente en la optimización de algoritmos.  
+https://claude.ai/
+
+**bible**: Página web utilizada para obtener textos en diversos idiomas.
+https://www.bible.com/es/languages

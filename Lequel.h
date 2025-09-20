@@ -1,6 +1,6 @@
 /**
  * @brief Lequel? language identification based on trigrams
- * @author Marc S. Ressl
+ * @author Marc S. Ressl, Rocco Diaz Parisi, Jorge Lopez Arauz, Luca Mateo Forchiassin
  *
  * @copyright Copyright (c) 2022-2023
  *
