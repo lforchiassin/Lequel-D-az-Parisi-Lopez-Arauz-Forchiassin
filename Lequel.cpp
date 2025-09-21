@@ -88,6 +88,7 @@ void normalizeTrigramProfile(TrigramProfile& trigramProfile)
         element.second = element.second / static_cast<float>(norm);
     }
 }
+
 /**
  * @brief Calculates the cosine similarity between two trigram profiles
  *
